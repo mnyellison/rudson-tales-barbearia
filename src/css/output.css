@@ -8,11 +8,19 @@
       "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --text-3xl: 1.875rem;
-    --text-3xl--line-height: calc(2.25 / 1.875);
-    --font-weight-bold: 700;
+    --color-black: #101010;
+    --spacing: 0.25rem;
+    --text-xl: 1.25rem;
+    --text-xl--line-height: calc(1.75 / 1.25);
+    --font-weight-semibold: 600;
+    --default-transition-duration: 150ms;
+    --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --color-beige: #c9a876;
+    --color-off-white: #f9f8f5;
+    --color-text: var(--color-black);
+    --font-body: "Inter", sans-serif;
   }
 }
 @layer base {
@@ -164,54 +172,250 @@
   }
 }
 @layer utilities {
-  .transform {
-    transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+  .absolute {
+    position: absolute;
   }
-  .text-3xl {
-    font-size: var(--text-3xl);
-    line-height: var(--tw-leading, var(--text-3xl--line-height));
+  .sticky {
+    position: sticky;
   }
-  .font-bold {
-    --tw-font-weight: var(--font-weight-bold);
-    font-weight: var(--font-weight-bold);
+  .inset-x-0 {
+    inset-inline: 0px;
   }
-  .underline {
-    text-decoration-line: underline;
+  .top-0 {
+    top: 0px;
+  }
+  .top-full {
+    top: 100%;
+  }
+  .z-90 {
+    z-index: 90;
+  }
+  .mx-auto {
+    margin-inline: auto;
+  }
+  .ml-auto {
+    margin-left: auto;
+  }
+  .block {
+    display: block;
+  }
+  .flex {
+    display: flex;
+  }
+  .hidden {
+    display: none;
+  }
+  .h-9 {
+    height: calc(var(--spacing) * 9);
+  }
+  .h-19\.5 {
+    height: calc(var(--spacing) * 19.5);
+  }
+  .w-auto {
+    width: auto;
+  }
+  .max-w-300 {
+    max-width: calc(var(--spacing) * 300);
+  }
+  .cursor-pointer {
+    cursor: pointer;
+  }
+  .flex-col {
+    flex-direction: column;
+  }
+  .items-center {
+    align-items: center;
+  }
+  .gap-4 {
+    gap: calc(var(--spacing) * 4);
+  }
+  .gap-4\.5 {
+    gap: calc(var(--spacing) * 4.5);
+  }
+  .border-t {
+    border-top-style: var(--tw-border-style);
+    border-top-width: 1px;
+  }
+  .border-beige {
+    border-color: var(--color-beige);
+  }
+  .bg-beige {
+    background-color: var(--color-beige);
+  }
+  .bg-black {
+    background-color: var(--color-black);
+  }
+  .px-4\.5 {
+    padding-inline: calc(var(--spacing) * 4.5);
+  }
+  .px-5\.5 {
+    padding-inline: calc(var(--spacing) * 5.5);
+  }
+  .py-2\.5 {
+    padding-block: calc(var(--spacing) * 2.5);
+  }
+  .py-5 {
+    padding-block: calc(var(--spacing) * 5);
+  }
+  .text-xl {
+    font-size: var(--text-xl);
+    line-height: var(--tw-leading, var(--text-xl--line-height));
+  }
+  .text-\[13px\] {
+    font-size: 13px;
+  }
+  .font-semibold {
+    --tw-font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-semibold);
+  }
+  .tracking-\[0\.12em\] {
+    --tw-tracking: 0.12em;
+    letter-spacing: 0.12em;
+  }
+  .text-off-white {
+    color: var(--color-off-white);
+  }
+  .uppercase {
+    text-transform: uppercase;
+  }
+  .transition-all {
+    transition-property: all;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  @media (hover: hover) {
+    .hover\:opacity-85:hover {
+      opacity: 85%;
+    }
+  }
+  .focus-visible\:outline-2:focus-visible {
+    outline-style: var(--tw-outline-style);
+    outline-width: 2px;
+  }
+  .focus-visible\:outline-offset-4:focus-visible {
+    outline-offset: 4px;
+  }
+  .focus-visible\:outline-offset-8:focus-visible {
+    outline-offset: 8px;
+  }
+  .focus-visible\:outline-off-white:focus-visible {
+    outline-color: var(--color-off-white);
+  }
+  @media (width >= 48rem) {
+    .md\:flex {
+      display: flex;
+    }
+    .md\:h-10 {
+      height: calc(var(--spacing) * 10);
+    }
+    .md\:px-6 {
+      padding-inline: calc(var(--spacing) * 6);
+    }
+  }
+  @media (width >= 64rem) {
+    .lg\:static {
+      position: static;
+    }
+    .lg\:flex {
+      display: flex;
+    }
+    .lg\:hidden {
+      display: none;
+    }
+    .lg\:flex-row {
+      flex-direction: row;
+    }
+    .lg\:items-center {
+      align-items: center;
+    }
+    .lg\:justify-between {
+      justify-content: space-between;
+    }
+    .lg\:gap-8 {
+      gap: calc(var(--spacing) * 8);
+    }
+    .lg\:border-0 {
+      border-style: var(--tw-border-style);
+      border-width: 0px;
+    }
+    .lg\:p-0 {
+      padding: 0px;
+    }
   }
 }
-@property --tw-rotate-x {
-  syntax: "*";
-  inherits: false;
+@layer components {
+  .nav-link {
+    display: block;
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 1px;
+    border-bottom-color: transparent;
+    padding-bottom: var(--spacing);
+    font-size: 11px;
+    --tw-tracking: 0.12em;
+    letter-spacing: 0.12em;
+    color: #f4f1ea;
+    text-transform: uppercase;
+    opacity: 85%;
+    transition-property: all;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+    &:hover {
+      @media (hover: hover) {
+        border-bottom-color: var(--color-beige);
+      }
+    }
+    &:hover {
+      @media (hover: hover) {
+        opacity: 100%;
+      }
+    }
+    &:focus-visible {
+      outline-style: var(--tw-outline-style);
+      outline-width: 2px;
+    }
+    &:focus-visible {
+      outline-offset: 3px;
+    }
+    &:focus-visible {
+      outline-color: var(--color-off-white);
+    }
+    @media (width >= 48rem) {
+      font-size: 12px;
+    }
+  }
 }
-@property --tw-rotate-y {
-  syntax: "*";
-  inherits: false;
+body {
+  font-family: var(--font-body);
+  color: var(--color-text);
 }
-@property --tw-rotate-z {
-  syntax: "*";
-  inherits: false;
+.font-serif-title {
+  font-family: "Playfair Display", serif;
 }
-@property --tw-skew-x {
+@property --tw-border-style {
   syntax: "*";
   inherits: false;
-}
-@property --tw-skew-y {
-  syntax: "*";
-  inherits: false;
+  initial-value: solid;
 }
 @property --tw-font-weight {
   syntax: "*";
   inherits: false;
 }
+@property --tw-tracking {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
-      --tw-rotate-x: initial;
-      --tw-rotate-y: initial;
-      --tw-rotate-z: initial;
-      --tw-skew-x: initial;
-      --tw-skew-y: initial;
+      --tw-border-style: solid;
       --tw-font-weight: initial;
+      --tw-tracking: initial;
+      --tw-outline-style: solid;
     }
   }
 }

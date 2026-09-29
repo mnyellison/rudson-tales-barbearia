@@ -1,12 +1,78 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Rudson Tales Barbearia</title>
+    <meta
+      name="description"
+      content="Barbearia especializada em cortes e barba. Agende seu horário pelo WhatsApp."
+    />
+    <link rel="icon" href="src/assets/favicon.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+      integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="src/css/output.css" />
   </head>
   <body>
-    <h1 class="text-3xl font-bold underline">Hello World</h1>
+    <header class="sticky top-0 z-90 bg-black">
+      <div
+        class="mx-auto flex h-19.5 max-w-300 items-center gap-4.5 px-5.5 md:px-6 lg:justify-between"
+      >
+        <a
+          href="#home"
+          class="focus-visible:outline-2 focus-visible:outline-offset-8 focus-visible:outline-off-white"
+        >
+          <img
+            src="src/assets/logo.png"
+            alt="Rudson Tales Barbearia"
+            class="block h-9 w-auto md:h-10"
+          />
+        </a>
+
+        <button
+          type="button"
+          id="menuBtn"
+          class="ml-auto cursor-pointer text-xl text-off-white lg:hidden"
+          aria-expanded="false"
+          aria-controls="navigationMenu"
+          aria-label="Abrir menu de navegação"
+        >
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+
+        <nav
+          id="navigationMenu"
+          class="absolute inset-x-0 top-full hidden flex-col gap-4 border-t border-beige bg-black px-5.5 py-5 lg:static lg:flex lg:flex-row lg:items-center lg:gap-8 lg:border-0 lg:p-0"
+        >
+          <a href="#home" class="nav-link">Início</a>
+          <a href="#about" class="nav-link">Sobre</a>
+          <a href="#services" class="nav-link">Serviços</a>
+          <a href="#gallery" class="nav-link">Galeria</a>
+          <a href="#contact" class="nav-link">Contato</a>
+        </nav>
+
+        <a
+          class="hidden bg-beige px-4.5 py-2.5 text-[13px] font-semibold tracking-[0.12em] uppercase transition-all hover:opacity-85 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-off-white md:flex"
+          href="https://wa.me/5584992236204?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20hor%C3%A1rio"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Agendar Horário
+        </a>
+      </div>
+    </header>
+
+    <script src="src/scripts/script.js"></script>
   </body>
 </html>

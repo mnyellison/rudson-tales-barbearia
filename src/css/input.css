@@ -1,1 +1,28 @@
 @import "tailwindcss";
+
+@theme {
+  --color-olive: #4b5a34;
+  --color-beige: #c9a876;
+  --color-black: #101010;
+  --color-off-white: #f9f8f5;
+
+  --color-text: var(--color-black);
+
+  --font-heading: "Playfair Display", serif;
+  --font-body: "Inter", sans-serif;
+}
+
+@layer components {
+  .nav-link {
+    @apply block border-b border-b-transparent pb-1 text-[11px] tracking-[0.12em] text-[#f4f1ea] uppercase opacity-85 transition-all hover:border-b-beige hover:opacity-100 focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-off-white md:text-[12px];
+  }
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text);
+}
+
+.font-serif-title {
+  font-family: "Playfair Display", serif;
+}
