@@ -1,28 +1,48 @@
 @import "tailwindcss";
 
 @theme {
-  --color-olive: #4b5a34;
+  --color-bg: #f5f3ef;
+  --color-dark: #151618;
+  --color-black: #0b0c0d;
+  --color-ink: #171717;
+  --color-ink-soft: #6b6b68;
+  --color-light: #f4f1ea;
   --color-beige: #c9a876;
-  --color-black: #101010;
+  --color-beige-soft: #e3d2aa;
   --color-off-white: #f9f8f5;
+  --color-olive: #4b5a34;
 
-  --color-text: var(--color-black);
-
-  --font-heading: "Playfair Display", serif;
-  --font-body: "Inter", sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
 }
 
 @layer components {
   .nav-link {
-    @apply block border-b border-b-transparent pb-1 text-[11px] tracking-[0.12em] text-[#f4f1ea] uppercase opacity-85 transition-all hover:border-b-beige hover:opacity-100 focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-off-white md:text-[12px];
+    @apply block border-b border-b-transparent pb-1 text-[11px] tracking-[0.12em] text-light uppercase opacity-85 transition-all hover:border-b-beige hover:opacity-100 focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-off-white;
+  }
+
+  .btn {
+    @apply inline-block cursor-pointer border border-transparent px-7 py-3.5 text-xs font-semibold tracking-[0.12em] uppercase transition-all focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-off-white;
+  }
+  .btn-beige {
+    @apply bg-beige text-black hover:opacity-85;
+  }
+  .btn-outline-light {
+    @apply border-off-white/50 text-off-white hover:border-off-white;
+  }
+  .btn-outline-dark {
+    @apply border-ink text-ink hover:bg-ink hover:text-off-white;
+  }
+  .btn-sm {
+    @apply self-start px-4.5 py-2.25 text-[10px];
   }
 }
 
 body {
-  font-family: var(--font-body);
-  color: var(--color-text);
-}
-
-.font-serif-title {
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+  background-color: var(--color-bg);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
