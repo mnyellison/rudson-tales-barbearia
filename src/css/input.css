@@ -36,6 +36,14 @@
   .btn-sm {
     @apply self-start px-4.5 py-2.25 text-[10px];
   }
+
+  .wrapper {
+    @apply mx-auto max-w-300 px-5.5 md:px-6;
+  }
+
+  .eyebrow {
+    @apply text-xs font-semibold tracking-[0.18em] text-beige uppercase;
+  }
 }
 
 body {
