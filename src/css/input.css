@@ -44,6 +44,36 @@
   .eyebrow {
     @apply text-xs font-semibold tracking-[0.18em] text-beige uppercase;
   }
+
+  .section-title {
+    @apply mt-2 font-serif text-3xl leading-tight font-semibold md:text-4xl;
+  }
+
+  .divider {
+    @apply mt-3.5 h-0.5 w-11 bg-beige;
+  }
+
+  .service-overlay {
+    @apply absolute inset-0 flex flex-col justify-end bg-linear-to-b from-transparent from-40% to-black/90 p-5.5;
+  }
+  .service-icon {
+    @apply mb-3.5 flex size-9.5 items-center justify-center rounded-full border border-beige text-beige;
+  }
+  .service-title {
+    @apply text-sm font-semibold tracking-[0.08em] text-off-white uppercase;
+  }
+  .service-text {
+    @apply mt-2 mb-4 text-[12.5px] text-off-white/65;
+  }
+
+  .price-row {
+    @apply flex justify-between border-b border-beige/20 py-3.25 [&>span:last-child]:text-beige;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 78px;
 }
 
 body {
