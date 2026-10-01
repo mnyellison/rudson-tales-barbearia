@@ -1,4 +1,8 @@
 {
   "plugins": ["prettier-plugin-tailwindcss"],
-  "tailwindStylesheet": "./src/css/input.css"
+  "tailwindStylesheet": "./src/css/input.css",
+  "printWidth": 120,
+  "bracketSameLine": true,
+  "singleAttributePerLine": false,
+  "htmlWhitespaceSensitivity": "ignore"
 }
