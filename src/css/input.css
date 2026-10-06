@@ -16,61 +16,6 @@
   --font-sans: "Inter", sans-serif;
 }
 
-@layer components {
-  .nav-link {
-    @apply block border-b border-b-transparent pb-1 text-[11px] tracking-[0.12em] text-light uppercase opacity-85 transition-all hover:border-b-beige hover:opacity-100 focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-off-white;
-  }
-
-  .btn {
-    @apply inline-block cursor-pointer border border-transparent px-7 py-3.5 text-xs font-semibold tracking-[0.12em] uppercase transition-all focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-off-white;
-  }
-  .btn-beige {
-    @apply bg-beige text-black hover:opacity-85;
-  }
-  .btn-outline-light {
-    @apply border-off-white/50 text-off-white hover:border-off-white;
-  }
-  .btn-outline-dark {
-    @apply border-ink text-ink hover:bg-ink hover:text-off-white;
-  }
-  .btn-sm {
-    @apply self-start px-4.5 py-2.25 text-[10px];
-  }
-
-  .wrapper {
-    @apply mx-auto max-w-300 px-5.5 md:px-6;
-  }
-
-  .eyebrow {
-    @apply text-xs font-semibold tracking-[0.18em] text-beige uppercase;
-  }
-
-  .section-title {
-    @apply mt-2 font-serif text-3xl leading-tight font-semibold md:text-4xl;
-  }
-
-  .divider {
-    @apply mt-3.5 h-0.5 w-11 bg-beige;
-  }
-
-  .service-overlay {
-    @apply absolute inset-0 flex flex-col justify-end bg-linear-to-b from-transparent from-40% to-black/90 p-5.5;
-  }
-  .service-icon {
-    @apply mb-3.5 flex size-9.5 items-center justify-center rounded-full border border-beige text-beige;
-  }
-  .service-title {
-    @apply text-sm font-semibold tracking-[0.08em] text-off-white uppercase;
-  }
-  .service-text {
-    @apply mt-2 mb-4 text-[12.5px] text-off-white/65;
-  }
-
-  .price-row {
-    @apply flex justify-between border-b border-beige/20 py-3.25 [&>span:last-child]:text-beige;
-  }
-}
-
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 78px;
@@ -83,4 +28,49 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+@layer components {
+  /* Botões */
+  .btn {
+    @apply inline-flex cursor-pointer items-center justify-center border border-transparent px-6 py-3 text-xs font-semibold tracking-wider uppercase transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-beige sm:text-sm;
+  }
+  .btn-beige {
+    @apply bg-beige text-dark hover:bg-beige-soft;
+  }
+  .btn-outline-light {
+    @apply border-off-white/50 text-off-white hover:border-off-white hover:bg-off-white/10;
+  }
+  .btn-outline-dark {
+    @apply border-ink text-ink hover:bg-ink hover:text-off-white;
+  }
+
+  /* Títulos e Seções */
+  .eyebrow {
+    @apply text-xs font-semibold tracking-widest text-beige uppercase;
+  }
+  .section-title {
+    @apply mt-2 font-serif text-3xl leading-tight font-semibold text-dark md:text-4xl;
+  }
+  .divider {
+    @apply mt-4 h-0.5 w-12 bg-beige;
+  }
+
+  /* Cards de Serviços e Tabela de Preços */
+  .service-overlay {
+    @apply absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/90 via-black/40 to-transparent p-6;
+  }
+  .service-icon {
+    @apply mb-4 flex size-10 items-center justify-center rounded-full border border-beige text-beige;
+  }
+  .service-title {
+    @apply text-base font-semibold tracking-wider text-off-white uppercase;
+  }
+  .service-text {
+    @apply mt-2 mb-4 text-xs leading-relaxed text-off-white/70;
+  }
+
+  .price-row {
+    @apply flex items-center justify-between border-b border-beige/20 py-3.5 text-sm [&>span:last-child]:font-semibold [&>span:last-child]:text-beige;
+  }
 }

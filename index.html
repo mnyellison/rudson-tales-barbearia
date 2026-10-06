@@ -20,34 +20,63 @@
     <link rel="stylesheet" href="src/css/output.css" />
   </head>
   <body>
-    <header class="sticky top-0 z-90 bg-black">
-      <div class="mx-auto flex h-19.5 max-w-300 items-center gap-4.5 px-5.5 md:px-6 lg:justify-between">
-        <a href="#home" class="focus-visible:outline-2 focus-visible:outline-offset-8 focus-visible:outline-off-white">
-          <img src="src/assets/logo.svg" alt="Rudson Tales Barbearia " class="block h-9 w-auto md:h-10" />
+    <header class="sticky top-0 z-50 border-b border-beige/10 bg-black">
+      <div class="mx-auto flex h-20 items-center justify-between px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+        <a href="#home">
+          <img src="src/assets/logo.svg" alt="Rudson Tales Barbearia" class="block h-9 w-auto md:h-10" />
         </a>
-
         <button
           type="button"
           id="menuBtn"
-          class="ml-auto cursor-pointer text-xl text-off-white lg:hidden"
+          class="ml-auto flex h-10 w-10 cursor-pointer items-center justify-center text-2xl text-off-white transition-colors hover:text-beige lg:hidden"
           aria-expanded="false"
           aria-controls="navigationMenu"
           aria-label="Abrir menu de navegação">
           <i class="fa-solid fa-bars" aria-hidden="true"></i>
         </button>
-
-        <nav
-          id="navigationMenu"
-          class="absolute inset-x-0 top-full hidden flex-col gap-4 border-t border-beige bg-black px-5.5 py-5 lg:static lg:flex lg:flex-row lg:items-center lg:gap-8 lg:border-0 lg:p-0">
-          <a href="#home" class="nav-link">Início</a>
-          <a href="#about" class="nav-link">Sobre</a>
-          <a href="#services" class="nav-link">Serviços</a>
-          <a href="#gallery" class="nav-link">Galeria</a>
-          <a href="#contact" class="nav-link">Contato</a>
+        <nav aria-label="Navegação principal">
+          <ul
+            id="navigationMenu"
+            class="absolute inset-x-0 top-full hidden flex-col gap-4 border-t border-beige/20 bg-black px-6 py-6 shadow-xl lg:static lg:flex lg:flex-row lg:items-center lg:gap-8 lg:border-0 lg:p-0 lg:shadow-none">
+            <li>
+              <a
+                href="#home"
+                class="text-sm font-medium tracking-wider text-off-white uppercase underline-offset-4 transition-colors hover:text-beige hover:underline">
+                Início
+              </a>
+            </li>
+            <li>
+              <a
+                href="#about"
+                class="text-sm font-medium tracking-wider text-off-white uppercase underline-offset-4 transition-colors hover:text-beige hover:underline">
+                Sobre
+              </a>
+            </li>
+            <li>
+              <a
+                href="#services"
+                class="text-sm font-medium tracking-wider text-off-white uppercase underline-offset-4 transition-colors hover:text-beige hover:underline">
+                Serviços
+              </a>
+            </li>
+            <li>
+              <a
+                href="#gallery"
+                class="text-sm font-medium tracking-wider text-off-white uppercase underline-offset-4 transition-colors hover:text-beige hover:underline">
+                Galeria
+              </a>
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="text-sm font-medium tracking-wider text-off-white uppercase underline-offset-4 transition-colors hover:text-beige hover:underline">
+                Contato
+              </a>
+            </li>
+          </ul>
         </nav>
-
         <a
-          class="btn btn-beige hidden text-center md:flex"
+          class="hidden items-center justify-center bg-beige px-5 py-2.5 text-sm font-semibold tracking-wider text-dark uppercase transition-colors hover:bg-beige-soft sm:inline-flex"
           href="https://wa.me/5584992236204?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20hor%C3%A1rio"
           target="_blank"
           rel="noopener noreferrer">
@@ -57,117 +86,114 @@
     </header>
 
     <main>
-      <!-- HERO -->
-      <section id="home" class="relative flex min-h-150 items-center text-off-white md:min-h-160">
+      <section id="home" class="relative flex min-h-[85vh] items-center bg-black text-off-white">
         <img
           src="src/assets/image-hero.png"
           alt="Barbeiro realizando um corte de cabelo em um cliente"
-          class="absolute inset-0 h-full w-full object-cover" />
-        <div class="absolute inset-0 bg-linear-to-r from-black/90 from-30% to-black/40"></div>
-
-        <div class="wrapper relative py-20 md:py-28">
-          <div class="max-w-140">
-            <span class="eyebrow">Barbearia em Mossoró</span>
-            <h1 class="mt-2 font-serif text-4xl leading-tight font-semibold md:text-6xl">
+          class="absolute inset-0 h-full w-full object-cover object-center" />
+        <div class="absolute inset-0 bg-linear-to-r from-black/95 via-black/80 to-black/40"></div>
+        <div class="relative mx-auto w-full max-w-7xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8 lg:py-36">
+          <div class="max-w-xl lg:max-w-2xl">
+            <span class="eyebrow mb-3 block">Barbearia em Mossoró</span>
+            <h1 class="font-serif text-4xl leading-tight font-semibold text-white sm:text-5xl lg:text-6xl">
               Cortes clássicos.
               <br />
               <span class="text-beige">Estilo moderno.</span>
             </h1>
-            <p class="mt-5 mb-8 max-w-115 text-[15px] text-off-white/75">
+            <p class="mt-4 mb-8 max-w-lg text-base leading-relaxed text-off-white/80 sm:text-lg">
               Técnica tradicional e tendências atuais para entregar o visual certo para você.
             </p>
-
-            <div class="flex flex-col gap-3.5 md:flex-row">
+            <div class="flex flex-col gap-4 sm:flex-row sm:items-center">
               <a
                 href="https://wa.me/5584992236204?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20hor%C3%A1rio"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="btn btn-beige text-center">
+                class="btn btn-beige w-full text-center sm:w-auto">
                 Agendar Horário
               </a>
-              <a href="#services" class="btn btn-outline-light text-center">Nossos Serviços</a>
+              <a href="#services" class="btn btn-outline-light w-full text-center sm:w-auto">Nossos Serviços</a>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- DIFERENCIAIS -->
-      <section class="bg-black py-9">
-        <div class="wrapper grid gap-6 md:grid-cols-2 lg:grid-cols-4 lg:gap-0">
-          <div class="flex gap-3.5 lg:border-l lg:border-beige/15 lg:px-6 lg:first:border-l-0 lg:first:pl-0">
-            <i class="fa-solid fa-award mt-0.5 text-2xl text-beige" aria-hidden="true"></i>
-            <div>
-              <h3 class="mb-1 text-xs tracking-[0.08em] text-off-white uppercase">Barbeiro Experiente</h3>
-              <p class="text-[12.5px] text-off-white/60">Profissional dedicado ao seu estilo</p>
-            </div>
-          </div>
-
-          <div class="flex gap-3.5 lg:border-l lg:border-beige/15 lg:px-6 lg:first:border-l-0 lg:first:pl-0">
-            <i class="fa-solid fa-pump-soap mt-0.5 text-2xl text-beige" aria-hidden="true"></i>
-            <div>
-              <h3 class="mb-1 text-xs tracking-[0.08em] text-off-white uppercase">Produtos de Qualidade</h3>
-              <p class="text-[12.5px] text-off-white/60">Cuidado com cabelo, barba e pele</p>
-            </div>
-          </div>
-
-          <div class="flex gap-3.5 lg:border-l lg:border-beige/15 lg:px-6 lg:first:border-l-0 lg:first:pl-0">
-            <i class="fa-solid fa-couch mt-0.5 text-2xl text-beige" aria-hidden="true"></i>
-            <div>
-              <h3 class="mb-1 text-xs tracking-[0.08em] text-off-white uppercase">Ambiente Confortável</h3>
-              <p class="text-[12.5px] text-off-white/60">Espaço pensado para o seu bem-estar</p>
-            </div>
-          </div>
-
-          <div class="flex gap-3.5 lg:border-l lg:border-beige/15 lg:px-6 lg:first:border-l-0 lg:first:pl-0">
-            <i class="fa-brands fa-whatsapp mt-0.5 text-2xl text-beige" aria-hidden="true"></i>
-            <div>
-              <h3 class="mb-1 text-xs tracking-[0.08em] text-off-white uppercase">Agende pelo WhatsApp</h3>
-              <p class="text-[12.5px] text-off-white/60">Rápido e sem complicação</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- SOBRE -->
-      <section id="about" class="bg-bg py-20 md:py-28">
-        <div class="wrapper grid items-center gap-16 lg:grid-cols-2 lg:gap-20">
-          <div class="relative mb-10 lg:mb-0">
-            <img
-              src="src/assets/about-1.png"
-              alt="Interior da barbearia com cadeira de couro e iluminação quente"
-              class="aspect-5/4 w-full object-cover" />
-            <img
-              src="src/assets/about-2.png"
-              alt="Detalhe de um corte sendo finalizado"
-              class="absolute right-0 -bottom-10 aspect-4/3 w-1/2 border-[6px] border-bg object-cover" />
+      <section aria-label="Diferenciais da Barbearia" class="border-y border-beige/15 bg-black py-8 sm:py-12">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-0">
             <div
-              class="absolute bottom-[-8%] left-[6%] flex size-23 items-center justify-center rounded-full bg-beige p-2 text-center text-[9px] font-semibold uppercase">
-              Desde 2016
+              class="flex items-start gap-4 border-b border-beige/10 pb-6 sm:border-b-0 sm:pb-0 lg:border-l lg:border-beige/15 lg:px-6 lg:first:border-l-0 lg:first:pl-0">
+              <i class="fa-solid fa-award shrink-0 text-2xl text-beige" aria-hidden="true"></i>
+              <div>
+                <h3 class="text-xs font-semibold tracking-wider text-off-white uppercase">Barbeiro Experiente</h3>
+                <p class="mt-1 text-xs text-off-white/60 sm:text-sm">Profissional dedicado ao seu estilo</p>
+              </div>
             </div>
-          </div>
-
-          <div>
-            <span class="eyebrow">Sobre</span>
-            <h2 class="section-title">Mais que um corte de cabelo</h2>
-            <div class="divider"></div>
-            <p class="mt-5 mb-7 max-w-105 text-[14.5px] text-ink-soft">
-              Na Rudson Tales Barbearia, um bom corte é uma experiência. Unimos técnicas tradicionais e estilo moderno
-              para você sair daqui se sentindo no seu melhor.
-            </p>
-            <a href="#contact" class="btn btn-outline-dark">Visite Nosso Espaço</a>
+            <div
+              class="flex items-start gap-4 border-b border-beige/10 pb-6 sm:border-b-0 sm:pb-0 lg:border-l lg:border-beige/15 lg:px-6">
+              <i class="fa-solid fa-pump-soap shrink-0 text-2xl text-beige" aria-hidden="true"></i>
+              <div>
+                <h3 class="text-xs font-semibold tracking-wider text-off-white uppercase">Produtos de Qualidade</h3>
+                <p class="mt-1 text-xs text-off-white/60 sm:text-sm">Cuidado com cabelo, barba e pele</p>
+              </div>
+            </div>
+            <div
+              class="flex items-start gap-4 border-b border-beige/10 pb-6 sm:border-b-0 sm:pb-0 lg:border-l lg:border-beige/15 lg:px-6">
+              <i class="fa-solid fa-couch shrink-0 text-2xl text-beige" aria-hidden="true"></i>
+              <div>
+                <h3 class="text-xs font-semibold tracking-wider text-off-white uppercase">Ambiente Confortável</h3>
+                <p class="mt-1 text-xs text-off-white/60 sm:text-sm">Espaço pensado para o seu bem-estar</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4 lg:border-l lg:border-beige/15 lg:px-6">
+              <i class="fa-brands fa-whatsapp shrink-0 text-2xl text-beige" aria-hidden="true"></i>
+              <div>
+                <h3 class="text-xs font-semibold tracking-wider text-off-white uppercase">Agende pelo WhatsApp</h3>
+                <p class="mt-1 text-xs text-off-white/60 sm:text-sm">Rápido e sem complicação</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- SERVIÇOS -->
-      <section id="services" class="bg-bg pb-20 text-center md:pb-28">
-        <div class="wrapper">
+      <section id="about" class="bg-bg py-16 sm:py-24 lg:py-28">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+            <div class="relative pb-10 sm:pb-12 lg:pb-0">
+              <img
+                src="src/assets/about-1.png"
+                alt="Interior da barbearia com cadeira de couro e iluminação quente"
+                class="aspect-4/3 w-full object-cover shadow-md" />
+              <img
+                src="src/assets/about-2.png"
+                alt="Detalhe de um corte sendo finalizado"
+                class="absolute right-0 -bottom-4 aspect-square w-1/2 border-4 border-bg object-cover shadow-xl sm:-bottom-8 sm:border-8" />
+              <div
+                class="absolute -bottom-6 left-4 flex size-20 items-center justify-center rounded-full bg-beige p-2 text-center text-[10px] font-bold tracking-wider text-dark uppercase shadow-lg sm:size-24 sm:text-xs">
+                Desde 2016
+              </div>
+            </div>
+            <div>
+              <span class="eyebrow block">Sobre</span>
+              <h2 class="section-title">Mais que um corte de cabelo</h2>
+              <div class="divider"></div>
+              <p class="mt-5 mb-8 max-w-lg text-sm leading-relaxed text-ink-soft sm:text-base">
+                Na Rudson Tales Barbearia, um bom corte é uma experiência. Unimos técnicas tradicionais e estilo moderno
+                para você sair daqui se sentindo no seu melhor.
+              </p>
+              <a href="#contact" class="btn btn-outline-dark w-full text-center sm:w-auto">Visite Nosso Espaço</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="bg-bg pb-16 text-center sm:pb-24 lg:pb-28">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span class="eyebrow">Nossos Serviços</span>
           <h2 class="section-title">Serviços Premium</h2>
           <div class="divider mx-auto"></div>
 
-          <div class="mt-14 grid gap-4 text-left md:grid-cols-2 lg:grid-cols-4 lg:gap-5">
-            <article class="relative aspect-3/4 overflow-hidden">
+          <div class="mt-12 grid gap-6 text-left sm:grid-cols-2 lg:grid-cols-4">
+            <article class="relative aspect-3/4 overflow-hidden rounded-sm">
               <img
                 src="src/assets/service-1.png"
                 alt="Cliente recebendo um corte de cabelo"
@@ -182,7 +208,7 @@
               </div>
             </article>
 
-            <article class="relative aspect-3/4 overflow-hidden">
+            <article class="relative aspect-3/4 overflow-hidden rounded-sm">
               <img
                 src="src/assets/service-2.png"
                 alt="Barba sendo aparada"
@@ -197,7 +223,7 @@
               </div>
             </article>
 
-            <article class="relative aspect-3/4 overflow-hidden">
+            <article class="relative aspect-3/4 overflow-hidden rounded-sm">
               <img
                 src="src/assets/service-3.png"
                 alt="Cliente recebendo corte e barba"
@@ -212,7 +238,7 @@
               </div>
             </article>
 
-            <article class="relative aspect-3/4 overflow-hidden">
+            <article class="relative aspect-3/4 overflow-hidden rounded-sm">
               <img
                 src="src/assets/service-4.png"
                 alt="Acabamento de sobrancelha"
@@ -230,18 +256,17 @@
         </div>
       </section>
 
-      <!-- PREÇOS -->
       <section id="prices" class="relative bg-black text-off-white">
         <img
           src="src/assets/prices.png"
           alt="Barbeiro finalizando a barba de um cliente"
-          class="h-55 w-full object-cover lg:absolute lg:inset-y-0 lg:right-0 lg:h-full lg:w-[52%]" />
-        <div class="wrapper relative lg:min-h-130">
-          <div class="max-w-105 py-16 lg:py-25">
+          class="h-64 w-full object-cover lg:absolute lg:inset-y-0 lg:right-0 lg:h-full lg:w-1/2" />
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="py-16 lg:max-w-md lg:py-24 xl:max-w-xl">
             <span class="eyebrow">Preços</span>
-            <h2 class="section-title">Tabela de Preços</h2>
+            <h2 class="section-title text-white">Tabela de Preços</h2>
             <div class="divider"></div>
-            <ul class="my-8.5 text-sm">
+            <ul class="my-8 space-y-1 text-sm sm:text-base">
               <li class="price-row">
                 <span>Social</span>
                 <span>R$ 30</span>
@@ -295,20 +320,20 @@
               href="https://wa.me/5584992236204?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20hor%C3%A1rio"
               target="_blank"
               rel="noopener noreferrer"
-              class="btn btn-beige">
+              class="btn btn-beige w-full text-center sm:w-auto">
               Agendar Horário
             </a>
           </div>
         </div>
       </section>
 
-      <!-- GALERIA -->
-      <section id="gallery" class="bg-bg py-20 text-center md:py-28">
-        <div class="wrapper">
+      <section id="gallery" class="bg-bg py-16 text-center sm:py-24 lg:py-28">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <span class="eyebrow">Nosso Trabalho</span>
           <h2 class="section-title">Galeria</h2>
           <div class="divider mx-auto"></div>
-          <div class="mt-12 grid grid-cols-2 gap-3.5 md:grid-cols-3 lg:grid-cols-5">
+
+          <div class="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
             <img src="src/assets/gallery-1.png" alt="Corte finalizado, vista de costas" class="gallery-img" />
             <img src="src/assets/gallery-2.png" alt="Barba sendo modelada" class="gallery-img" />
             <img src="src/assets/gallery-3.png" alt="Interior da barbearia" class="gallery-img" />
@@ -318,117 +343,104 @@
         </div>
       </section>
 
-      <!-- CONTATO -->
       <section id="contact" class="grid md:grid-cols-2">
-        <div class="bg-olive px-5.5 py-16 text-off-white md:px-11 lg:py-17.5">
-          <span class="eyebrow text-off-white!">Agende seu horário</span>
+        <div class="bg-olive px-6 py-16 text-off-white sm:px-12 lg:py-20">
+          <span class="eyebrow text-off-white">Agende seu horário</span>
           <h2 class="section-title">Reserve seu horário</h2>
-          <p class="mt-4 mb-7 max-w-105 text-sm text-off-white/75">
+          <p class="mt-4 mb-8 max-w-md text-sm text-off-white/80 sm:text-base">
             Chame no WhatsApp e escolha o melhor horário para você.
           </p>
           <a
             href="https://wa.me/5584992236204?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20hor%C3%A1rio"
             target="_blank"
             rel="noopener noreferrer"
-            class="btn btn-beige">
+            class="btn btn-beige w-full text-center sm:w-auto">
             <i class="fa-brands fa-whatsapp mr-2" aria-hidden="true"></i>
             Agendar pelo WhatsApp
           </a>
         </div>
- 
-        <div class="bg-[#eeebe4] px-5.5 py-16 md:px-11 lg:py-17.5">
-          <div class="mb-6.5 flex gap-3.5">
-            <i
-              class="fa-solid fa-location-dot mt-1 w-6 text-xl text-beige"
-              aria-hidden="true">
-            </i>
+
+        <div class="bg-[#eeebe4] px-6 py-16 sm:px-12 lg:py-20">
+          <div class="mb-6 flex items-start gap-4">
+            <i class="fa-solid fa-location-dot mt-1 shrink-0 text-xl text-beige" aria-hidden="true"></i>
             <div>
-              <h3 class="mb-1 text-[11px] tracking-widest text-ink-soft uppercase">
-                Endereço
-              </h3>
-              <p class="text-[13.5px]">
-                Rua Martins Júnior, 480<br />Planalto Treze de Maio, Mossoró/RN
+              <h3 class="mb-1 text-xs font-semibold tracking-wider text-ink-soft uppercase">Endereço</h3>
+              <p class="text-sm text-dark sm:text-base">
+                Rua Martins Júnior, 480
+                <br />
+                Planalto Treze de Maio, Mossoró/RN
               </p>
             </div>
           </div>
-          <div class="mb-6.5 flex gap-3.5">
-            <i
-              class="fa-brands fa-whatsapp mt-1 w-6 text-xl text-beige"
-              aria-hidden="true">
-            </i>
+
+          <div class="mb-6 flex items-start gap-4">
+            <i class="fa-brands fa-whatsapp mt-1 shrink-0 text-xl text-beige" aria-hidden="true"></i>
             <div>
-              <h3 class="mb-1 text-[11px] tracking-widest text-ink-soft uppercase">
-                WhatsApp
-              </h3>
-              <p class="text-[13.5px]">(84) 99223-6204</p>
+              <h3 class="mb-1 text-xs font-semibold tracking-wider text-ink-soft uppercase">WhatsApp</h3>
+              <p class="text-sm text-dark sm:text-base">(84) 99223-6204</p>
             </div>
           </div>
-          <div class="flex gap-3.5">
-            <i
-              class="fa-regular fa-clock mt-1 w-6 text-xl text-beige"
-              aria-hidden="true">
-            </i>
+
+          <div class="flex items-start gap-4">
+            <i class="fa-regular fa-clock mt-1 shrink-0 text-xl text-beige" aria-hidden="true"></i>
             <div>
-              <h3 class="mb-1 text-[11px] tracking-widest text-ink-soft uppercase">
-                Funcionamento
-              </h3>
-              <p class="text-[13.5px]">Segunda a sábado</p>
+              <h3 class="mb-1 text-xs font-semibold tracking-wider text-ink-soft uppercase">Funcionamento</h3>
+              <p class="text-sm text-dark sm:text-base">Segunda a sábado</p>
             </div>
           </div>
         </div>
       </section>
-    </main>
- 
-    <footer class="bg-black pt-16 text-off-white/70">
-      <div class="wrapper grid gap-9 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1.4fr_1fr]">
-        <div>
-          <img
-            src="src/assets/logo.svg"
-            alt="Rudson Tales Barbearia"
-            class="mb-3 h-9 w-auto"
-          />
-          <p class="text-[13px]">Cortes clássicos, estilo moderno.</p>
-        </div>
-        <div>
-          <h4 class="footer-title">Links</h4>
-          <ul class="text-[13px]">
-            <li class="mb-2.5"><a href="#home" class="hover:text-beige">Início</a></li>
-            <li class="mb-2.5"><a href="#about" class="hover:text-beige">Sobre</a></li>
-            <li class="mb-2.5"><a href="#services" class="hover:text-beige">Serviços</a></li>
-            <li class="mb-2.5"><a href="#gallery" class="hover:text-beige">Galeria</a></li>
-            <li class="mb-2.5"><a href="#contact" class="hover:text-beige">Contato</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="footer-title">Contato</h4>
-          <ul class="text-[13px]">
-            <li class="mb-2.5">
-              Rua Martins Júnior, 480, Planalto Treze de Maio, Mossoró/RN
-            </li>
-            <li class="mb-2.5">(84) 99223-6204</li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="footer-title">Redes</h4>
-          <div class="flex gap-2.5">
-            <a
-              href="https://wa.me/5584992236204"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="WhatsApp"
-              class="social-link">
-              <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
-            </a>
-            <a href="#" aria-label="Instagram" class="social-link">
-              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-            </a>
+
+      <footer class="bg-black pt-16 text-off-white/70">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            <div>
+              <img src="src/assets/logo.svg" alt="Rudson Tales Barbearia" class="mb-4 h-9 w-auto" />
+              <p class="text-xs sm:text-sm">Cortes clássicos, estilo moderno.</p>
+            </div>
+
+            <div>
+              <h4 class="footer-title">Links</h4>
+              <ul class="space-y-2 text-xs sm:text-sm">
+                <li><a href="#home" class="transition-colors hover:text-beige">Início</a></li>
+                <li><a href="#about" class="transition-colors hover:text-beige">Sobre</a></li>
+                <li><a href="#services" class="transition-colors hover:text-beige">Serviços</a></li>
+                <li><a href="#gallery" class="transition-colors hover:text-beige">Galeria</a></li>
+                <li><a href="#contact" class="transition-colors hover:text-beige">Contato</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 class="footer-title">Contato</h4>
+              <ul class="space-y-2 text-xs sm:text-sm">
+                <li>Rua Martins Júnior, 480, Planalto Treze de Maio, Mossoró/RN</li>
+                <li>(84) 99223-6204</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 class="footer-title">Redes</h4>
+              <div class="flex gap-3">
+                <a
+                  href="https://wa.me/5584992236204"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="WhatsApp"
+                  class="social-link">
+                  <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                </a>
+                <a href="#" aria-label="Instagram" class="social-link">
+                  <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-12 border-t border-off-white/10 py-6 text-center text-xs text-off-white/45">
+            © 2026 Rudson Tales Barbearia. Todos os direitos reservados.
           </div>
         </div>
-      </div>
-      <div class="mt-12 border-t border-off-white/10 py-5.5 text-center text-xs text-off-white/45">
-        © 2026 Rudson Tales Barbearia. Todos os direitos reservados.
-      </div>
-    </footer>
+      </footer>
     </main>
 
     <script src="src/scripts/script.js"></script>

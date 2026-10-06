@@ -7,10 +7,7 @@ function updateMenuState(isOpen) {
   navigationMenu.classList.toggle("flex", isOpen);
 
   menuBtn.setAttribute("aria-expanded", isOpen);
-  menuBtn.setAttribute(
-    "aria-label",
-    isOpen ? "Fechar menu de navegação" : "Abrir menu de navegação",
-  );
+  menuBtn.setAttribute("aria-label", isOpen ? "Fechar menu de navegação" : "Abrir menu de navegação");
 
   menuIcon.classList.toggle("fa-bars", !isOpen);
   menuIcon.classList.toggle("fa-xmark", isOpen);
